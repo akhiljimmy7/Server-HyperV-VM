@@ -19,6 +19,7 @@ Invoke-Command -ComputerName $item.HostIP -AsJob -ScriptBlock {
 Param (
 $item ) 
 
+#Renaming the VM Name Displayed in the Hyper-V Manager
 Rename-VM -Name $item.CurrentVM1Name -NewName $item.VM1Name
 Rename-VM -Name $item.CurrentVM2Name -NewName $item.VM2Name
 
